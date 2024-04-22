@@ -12,50 +12,94 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">I'm Khin Yadanar Lin</div>
+    <div class="text-3xl py-3 font-bold">Data Science and Analytics Professional</div>
     <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+      <text class="text-justify">
+        <p>
+        Results-driven data professional with 8 years of experience in quantitative research, analytics, and management consulting. I am passionate about delivering
+        impactful business solutions through the power of big data technologies and data science techniques.
+      </p>
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/khinyadanarlin/" target="_blank"> Let's connect!</a>
+      <a href="https://github.com/khinydnlin" target="_blank" class="btn btn-outline">
+        View projects on Github
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects </div>
+  </div>
+  <HorizontalCard
+    title="Topic Modelling & Sentiment Analysis - Data Science Subreddit"
+    img="/reddit.jpg"
+    desc="I crawled over 7,000 top posts and comments from the 'Data Science' subreddit using the Reddit API. I then applied text preprocessing and TF-IDF vectorization before training an LDA model to extract five key discussion themes. I also employed a lexicon-based sentiment analyser to guage the sentiment across different flairs."
+    url="https://github.com/khinydnlin/topic_modelling_ds_subreddit/blob/main/README.md"
+    tags= {["Python","PRAW","NLTK","Tf-idf Vectorizer","LDA","Vader"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="False Fire Alarms Detection - London Fire Brigade"
+    img="/project1.jpg"
+    desc="In the UK, 42% of emergency incidents reported to rescue teams are false fire alarms, costing approximately £1 billion annually to address. In this project, I analysed spatial data using geopandas, and built a classifier to detect false alarms using techniques like Logistic Regression, KNN, Naive Bayes, and Random Forest."
+    url="https://github.com/khinydnlin/false_fire_alarms_detection/blob/main/README.md"
+    tags={["Python","geopandas","sklearn","Classification","Supervised Machine Learning"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Car Auction Price Predictions"
+    img="/project2.jpg"
+    desc="In this freelance Project for a Myanmar-based Car Auction Platform, I identified influential factors on second-hand car prices through feature importance analysis and developed a predictive model that provides resale value estimates by using Ridge Regression and Ensemble Methods."
+    url="https://github.com/khinydnlin/car_auction_price_predictions/blob/main/README.md"
+    tags={["Python","Statsmodels","sklearn","Supervised Machine Learning"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Inquiry Volume Forecasting - ARIMA Time Series Forecasting"
+    img="/messenger.jpg"
+    desc="This project uses real-world business data from an anonymised company to forecast daily chat inquiry volumes on Facebook Messenger through ARIMA modelling. Specifically, I explored dynamic regression with ARIMA error terms method, to allow the inclusion of additional predictors such as advertising expenditure."
+    url="https://github.com/khinydnlin/chat_inquiry_volume_forecasting/blob/main/README.md"
+    tags={["R","ARIMA Time Series Forecasting","Dynamic Regression"]}
+  />
+ 
+
+  <div class="text-center mt-8 mb-12">
+    <a href="/projects" class="btn btn-outline">View more projects</a>
+  </div>
+
+<div class="divider my-8"></div>
+
+ <div>
+    <div class="text-3xl w-full font-bold mb-2">Latest from Medium Blogs </div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Optimisation: Unpacking Queueing Theory in its Simplest Terms"
+    img="/qtheory.jpg"
+    desc="Have you ever found yourself waiting in line at a supermarket, a restaurant, or a bank, wishing your turn would come just a bit faster?"
+    url="https://medium.com/towards-data-science/optimisation-unpacking-queueing-theory-in-its-simplest-terms-484ad80be56c"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Lessons From My ML Journey: Data Splitting and Data Leakage"
+    img="/mljourney.jpg"
+    desc="Common mistakes to avoid when you transition from statistical modelling to Machine Learning"
+    url="https://medium.com/towards-data-science/two-rookie-mistakes-i-made-in-machine-learning-improper-data-splitting-and-data-leakage-3e33a99560ea"
   />
+  {/*Commenting out
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Web Analytics and Product Analytics for an E-commerce"
+    img="/project3.jpg"
+    desc="Personal Project: Worked with a six-table SQL database to analyze web traffic and product performance, aiming to optimize marketing strategies for a hypothetical e-commerce start-up."
     url="#"
-    badge="FOSS"
   />
-
+  */}
+ 
+{/*Commenting out this Blog section for later use
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>
@@ -74,5 +118,6 @@ const last_posts = posts.slice(0, 3);
         <div class="divider my-0" />
       </>
     ))
-  }
+ }
+ */}
 </BaseLayout>
